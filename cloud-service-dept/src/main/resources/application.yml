@@ -22,3 +22,18 @@ spring:
       initial-size: 5                                  # 初始化连接数
       max-total: 5                                     # 最大连接数
       max-wait-millis: 200                             # 等待连接获取的最大超时时间
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/       #向eureka server发送注册信息
+  instance:
+    instance-id: service-dept
+    prefer-ip-address: true     #设置eureka注册中心,访问路径可以显示IP地址
+
+info:
+  app.name: learn-cloud-dept
+  app.decription: 主要是部门微服务
+  company.name: www.ethan.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
